@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ehcache>
+
+    <!--<cache name="PersistencePerformanceTest.war#postgresPU.com.postrowski.Foo"-->
+    <cache name="PersistencePerformanceTest.war#postgresPU.foos"
+           eternal="false"
+           overflowToDisk="false"
+           maxElementsInMemory="50000"
+           timeToLiveSeconds="86400" />
+
+    <cache name="org.hibernate.cache.internal.StandardQueryCache"
+           maxElementsInMemory="10000"
+           eternal="false"
+           timeToLiveSeconds="86400"
+           overflowToDisk="false"
+           memoryStoreEvictionPolicy="LRU" />
+
+    <defaultCache
+            maxElementsInMemory="50000"
+            overflowToDisk="false"
+            timeToIdleSeconds="18000"
+            timeToLiveSeconds="18000"
+            memoryStoreEvictionPolicy="LRU" />
+</ehcache>

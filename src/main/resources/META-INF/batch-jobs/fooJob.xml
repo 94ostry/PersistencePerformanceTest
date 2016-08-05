@@ -1,0 +1,20 @@
+<job id="fooJob" xmlns="http://xmlns.jcp.org/xml/ns/javaee"  version="1.0" >
+
+    <listeners>
+        <listener ref="fooJobListener" />
+    </listeners>
+
+    <step id="fooStep">
+        <properties>
+            <property name="javax.transaction.global.timeout" value="86400" />
+        </properties>
+        <chunk item-count="100000">
+            <reader ref="fooReader" />
+            <writer ref="fooWriter" />
+        </chunk>
+    </step>
+
+</job>
+
+
+
